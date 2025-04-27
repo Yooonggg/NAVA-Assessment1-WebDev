@@ -42,7 +42,8 @@ button, #print-btn, #clearBtn, #exit-btn {
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 100%;
+  width: 20%;
+  margin-right: 2%;
   margin-bottom: 2%;
 }
 
@@ -66,7 +67,7 @@ button:hover,
 
 /* Landing page buttons */
 .landing-btn {
-  margin: 5% 5% 5% 5%;
+  margin: 5%;
 }
 
 /* Survey Styling */
@@ -247,13 +248,6 @@ td {
     padding-inline-end: 0;
   }
 
-  #print-btn,
-  #clearBtn,
-  #exit-btn {
-    width: 80%;
-    margin-bottom: 10px;
-  }
-
   button {
     font-size: 1rem;
     padding: 10px 20px;
@@ -264,7 +258,16 @@ td {
   }
 }
 
+/* Only adjust button widths for small screens */
 @media (max-width: 600px) {
+  #print-btn,
+  #clearBtn,
+  #exit-btn {
+    width: 100%;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+
   table,
   thead,
   tbody,
