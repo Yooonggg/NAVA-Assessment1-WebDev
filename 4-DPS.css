@@ -1,97 +1,82 @@
-@media print {
-  .nav-btns {
-    display: none !important;
-  }
-}
-
+/* Global Styles */
 body {
   background-color: #f0f7f1;
-  margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-/* Typography */
+h1, h2 {
+  color: #235347;
+  text-align: center;
+}
+
 h1 {
   font-family: Helvetica;
-  color: #235347;
-  font-size: 3rem;
-  text-align: center;
+  font-size: 5rem; /* Scalable */
 }
 
 h2 {
   font-family: Helvetica;
-  color: #235347;
-  font-size: 2rem;
-  text-align: center;
+  font-size: 3rem; /* Scalable */
 }
 
 p {
-  font-family: Arial;
   font-size: 1.25rem;
   text-align: center;
   color: rgb(77, 73, 73);
 }
 
-/* Buttons */
-button, #print-btn, #clearBtn, #exit-btn {
+button {
   background-color: #235347;
   color: white;
-  padding: 12px 24px;
-  font-size: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 20%;
-  margin-right: 2%;
+  width: 100%;
   margin-bottom: 2%;
 }
 
-button:hover,
-#print-btn:hover,
-#clearBtn:hover,
-#exit-btn:hover {
+button:hover {
   background-color: #163832;
 }
 
-/* Layout Containers */
-.container,
-#survey-container {
-  margin: 5% auto;
-  width: 60%;
+/* Container for Landing and Survey Pages */
+.container, #survey-container {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 800px;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 2%;
-  background-color: white;
 }
 
-/* Landing page buttons */
-.landing-btn {
-  margin: 5%;
-}
-
-/* Survey Styling */
-label {
-  font-family: Arial;
-  font-size: 1.2rem;
-  text-align: center;
-  color: rgb(77, 73, 73);
-  margin: 2% 0;
-}
-
+/* Survey Page */
 #survey-heading {
   font-family: Helvetica;
   color: white;
-  font-size: 2.5rem;
-  text-align: center;
+  font-size: 3rem;
   background-color: #235347;
-  padding: 10px;
+  padding: 1rem;
   border-radius: 2px;
 }
 
+label {
+  font-size: 1.25rem;
+  text-align: center;
+  color: rgb(77, 73, 73);
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
 .map-placeholder {
-  margin: 5px 0 20px 0;
-  height: 200px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  height: 20vh;
   background-color: #dcdcdc;
   display: flex;
   align-items: center;
@@ -101,146 +86,184 @@ label {
   border-radius: 8px;
 }
 
-/* Form Inputs */
-.address,
-.number,
-#username,
-#password,
-#textarea {
+/* Input Fields */
+.address, .number, #username, #password, #textarea {
   width: 100%;
-  max-width: 100%;
-  height: auto;
-  padding: 16px;
+  height: 3rem;
+  padding: 1rem;
   font-size: 1rem;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
   border-radius: 5px;
   color: #333333;
-  margin: 24px 0;
-  border: 1px solid #ccc;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#textarea {
+  height: 8rem;
   resize: none;
+  text-align: justify;
 }
 
 /* Radio & Checkbox Groups */
-.radio-group,
-.checkbox-group {
-  display: flex;
-  gap: 1rem;
-  margin: 1% 5%;
+.radio-group, .checkbox-group {
+  margin: 1%;
   padding: 1%;
+}
+
+.radio-group {
+  display: flex;
+  gap: 2rem;
   align-items: center;
   flex-wrap: wrap;
 }
 
-label.yes-label,
-label.no-label,
-label.Ass-label,
-label.fam-label {
-  padding: 10px 20px;
+.checkbox-group {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+label.yes-label, label.no-label, label.Ass-label, label.fam-label {
+  padding: 1rem 2rem;
   border: 2px solid #ccc;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.2s ease;
   user-select: none;
-  text-align: center;
 }
 
-/* Hover Effects */
-.yes-label:hover {
-  background-color: lightgreen;
-  border-color: green;
-  color: green;
-}
-
-.no-label:hover {
-  background-color: #ffcccc;
-  border-color: red;
-  color: red;
-}
-
-.Ass-label:hover,
-.fam-label:hover {
+label.yes-label:hover, label.no-label:hover, label.Ass-label:hover, label.fam-label:hover {
   background-color: #DAF1DE;
   border-color: #163832;
   color: #163832;
 }
 
 /* Checked States */
-input[type="radio"]#yes:checked + label.yes-label {
+input[type="radio"]:checked + label.yes-label {
   background-color: green;
   color: white;
   border-color: green;
 }
 
-input[type="radio"]#no:checked + label.no-label {
+input[type="radio"]:checked + label.no-label {
   background-color: red;
   color: white;
   border-color: red;
 }
 
-input[type="checkbox"]#fam:checked + label.fam-label,
-input[type="checkbox"]#Ass:checked + label.Ass-label {
+input[type="checkbox"]:checked + label.fam-label, input[type="checkbox"]:checked + label.Ass-label {
   background-color: #0b2b26;
   color: white;
   border-color: #0b2b26;
 }
 
-/* Table Styling */
+/* Printable Data */
 table {
   width: 100%;
   border-collapse: collapse;
   background: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
   font-family: Arial;
-  color: #333333;
+  color:#333333;
   margin-bottom: 5%;
 }
 
 th {
-  padding: 12px;
+  padding: 1rem;
   background-color: #163832;
   text-align: center;
   color: white;
 }
 
 td {
-  padding: 12px;
+  padding: 1rem;
   border-bottom: 1px solid #ddd;
   text-align: center;
 }
 
-/* Nav Buttons */
 .nav-btns {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   margin-bottom: 2%;
-  margin-left: 25%;
   padding-inline-end: 2%;
-  gap: 1rem;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .container,
-  #survey-container {
+#exit-btn, #print-btn, #clearBtn {
+  background-color: #235347;
+  color: white;
+  padding: 0.3em 1em;  /* Thinner padding */
+  font-size: 1rem;  /* Keep font size relative */
+  font-weight: 400; /* Normal weight for consistency */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 20%;  /* Same width for all buttons */
+  margin-bottom: 2%;
+  margin-left: 0.3%;
+}
+
+#exit-btn:hover, #print-btn:hover, #clearBtn:hover {
+  background-color: #163832;
+}
+
+/* Media query for smaller screen sizes */
+@media (max-width: 768px) {
+  #exit-btn, #print-btn, #clearBtn {
+    width: 80%;  /* Button width becomes larger on smaller screens */
+    font-size: 0.9rem;  /* Slightly smaller font size */
+    padding: 0.2em 0.9em;  /* Even thinner padding for smaller screens */
+    margin-left: 0;  /* Remove margin */
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  #exit-btn, #print-btn, #clearBtn {
+    width: 90%;  /* Further increase width on extra small screens */
+    padding: 0.2em 0.7em;  /* Thinner padding for very small screens */
+    font-size: 0.8rem;  /* Reduce font size more */
+  }
+}
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  /* Containers */
+  .container, #survey-container {
+    margin: 5%;
     width: 90%;
-    margin: 5% auto;
   }
 
-  .radio-group,
-  .checkbox-group {
+  /* Button Styles */
+  button {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  /* Input Fields */
+  .address, .number, #username, #password, #textarea {
+    height: 3rem;
+  }
+
+  /* Radio & Checkbox Groups */
+  .radio-group, .checkbox-group {
     flex-direction: column;
-    align-items: stretch;
-    gap: 1rem;
-    margin: 2% 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 
-  label.yes-label,
-  label.no-label,
-  label.Ass-label,
-  label.fam-label {
+  label.yes-label, label.no-label, label.Ass-label, label.fam-label {
     width: 100%;
+    text-align: center;
   }
 
+  /* Navigation Buttons */
   .nav-btns {
     flex-direction: column;
     align-items: center;
@@ -248,45 +271,32 @@ td {
     padding-inline-end: 0;
   }
 
-  button {
-    font-size: 1rem;
-    padding: 10px 20px;
+  #print-btn, #clearBtn, #exit-btn {
+    width: 80%;
+    margin-bottom: 10px;
   }
 
+  /* Table Styling */
   table {
-    font-size: 0.875rem;
+    font-size: 1rem;
+  }
+
+  th, td {
+    padding: 0.8rem;
   }
 }
 
-/* Only adjust button widths for small screens */
-@media (max-width: 600px) {
-  #print-btn,
-  #clearBtn,
-  #exit-btn {
-    width: 100%;
-    font-size: 0.95rem;
-    margin-bottom: 12px;
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3rem;
   }
 
-  table,
-  thead,
-  tbody,
-  th,
-  td,
-  tr {
-    display: block;
-    width: 100%;
+  h2 {
+    font-size: 2rem;
   }
 
-  th {
-    background-color: #235347;
-    text-align: left;
-  }
-
-  td {
-    text-align: left;
-    padding: 10px;
-    border: none;
-    border-bottom: 1px solid #ddd;
+  button {
+    padding: 0.8rem;
+    font-size: 1.1rem;
   }
 }
