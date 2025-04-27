@@ -325,3 +325,10 @@ td {
     font-size: 1.1rem;
   }
 }
+
+
+@media print{
+  .nav-btns {
+    display: none !important;
+  }
+}
