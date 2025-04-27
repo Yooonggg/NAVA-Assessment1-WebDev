@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Data Table</title>
+    <link rel="icon" type="x-icon"  href = "6-DPS_Logo.png"/>
+    <link rel="stylesheet" href="4-DPS.css">
+    
+</head>
+
+<body>
+
+  <div class="report">
+    <h1>Survey Data</h1>
+<table id="resultsTable">
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Family Members</th>
+      <th>Emergency Kit</th>
+      <th>Evacuation Plan</th>
+      <th>Experience</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+</div>
+
+<div class="nav-btns">
+  <button onclick="window.print()" id="print-btn">Print Report</button>
+  <button id="clearBtn">Clear Survey Data</button>
+  <a href= "index.html" id="exit-btn">
+  <button>Exit</button>
+  
+  </a>
+</div>
+  <script>
+    const table = document.querySelector('#resultsTable tbody');
+
+// Load all survey entries
+const surveyList = JSON.parse(localStorage.getItem('surveyList')) || [];
+
+surveyList.forEach(entry => {
+  const row = document.createElement('tr');
+
+  if (entry.kit === 'No') {
+    row.classList.add('no-kit');
+  }
+
+  row.innerHTML = `
+    <td>${entry.address}</td>
+    <td>${entry.family_members}</td>
+    <td>${entry.kit}</td>
+    <td>${entry.evac.join(', ')}</td>
+    <td>${entry.experience}</td>
+  `;
+
+  table.appendChild(row);
+});
+
+document.getElementById('clearBtn').addEventListener('click', function() {
+    if (confirm('Are you sure you want to clear all survey data?')) {
+      localStorage.removeItem('surveyList');
+      location.reload(); // Reload to update the displayed data
+    }
+  });
+
+  </script>
+
+</body>
+
+</html>

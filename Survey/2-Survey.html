@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Survey</title>
+    <link rel="icon" type="x-icon"  href = "6-DPS_Logo.png"/>
+    <link rel="stylesheet" href="4-DPS.css">
+    
+</head>
+
+<body>
+
+    <div id="survey-container">
+        <form id="surveyForm">
+            <div>
+                <form >
+                    <h1 id="survey-heading">Household Information</h1>  
+                    <label for="address">Address:</label><br/>
+                    <input type="text" class="address" id="address" name="address" required><br/>
+                  
+                    <label for="map-placeholder">Pin your Location:</label><br/>
+                    <div class="map-placeholder" id="map-placeholder">[ Map Placeholder ]</div>
+                  
+                    <label for="family-members">Number of Family Members:</label><br/>
+                    <input type="number" class="number" id="family-members" name="family_members" required min="1"><br/>
+                    
+                    <h1 id="survey-heading">Preparedness Check</h1>
+
+                    <label> Do you have an Emergency Kit?</label><br/>
+
+                    <div class="radio-group">
+
+                    <input type="radio"  id="yes" name="kit" value="Yes" required hidden>
+                    <label for="yes" class="yes-label">Yes</label><br/>
+                    
+                    <input type="radio"  id="no" name="kit" value="No" required hidden> 
+                    <label for="no" class="no-label">No</label><br/>
+                    
+                    </div>
+
+                    <label>What is your Evacuation Plan? (Select all that apply)</label><br/><br/>
+                    <div class="checkbox-group">
+                    <input type="checkbox" id="Ass" name="evac[]" value="Assigned Center" hidden>
+                    <label for="Ass" class="Ass-label">Assigned Center</label> <br/> <br/><br/>
+                    <input type="checkbox"  id="fam" name="evac[]" value="Family Meeting Point" hidden>
+                    <label for="fam" class="fam-label">Family Meeting point</label>
+                    </div>
+
+                    <label>Past Disaster Experience:</label><br/>
+                    <textarea name="experience" rows="3" id="textarea"></textarea><br/>
+                  
+                    
+                  </form>
+
+                  
+                  <button class="submit-btn" type="submit">Submit</button>
+              
+            </div>
+            
+            
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('surveyForm');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const data = new FormData(form);
+
+  const entry = {
+    address: data.get('address'),
+    family_members: data.get('family_members'),
+    kit: data.get('kit'),
+    evac: data.getAll('evac[]'),
+    experience: data.get('experience')
+  };
+
+  // Get the existing list, or create a new one
+  const surveyList = JSON.parse(localStorage.getItem('surveyList')) || [];
+
+  // Add the new entry
+  surveyList.push(entry);
+
+  // Save it back
+  localStorage.setItem('surveyList', JSON.stringify(surveyList));
+
+  // Now redirect to the message page
+  window.location.href = '3.2-Message-Directiory.html'; 
+});
+
+    </script>
+
+</body>
+
+</html>

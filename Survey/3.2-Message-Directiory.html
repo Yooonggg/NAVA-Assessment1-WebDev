@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Response Recorded</title>
+    <link rel="icon" type="x-icon"  href = "6-DPS_Logo.png"/>
+    <link rel="stylesheet" href="4-DPS.css">
+   
+
+</head>
+
+<body>
+
+    <div class="container" id="">
+        <h1>Your Response has been recorded.</h1> <br/>
+
+      
+        <button id="submitAnotherBtn" class="submit-another-btn">Submit Another Response</button>
+
+        <a href="3.1-Admin-Redirectory.html">
+            <button class="admin-btn" onclick="location.href='3.1-Admin-Redirectory.html'">Access Admin</button>
+        </a>
+
+        <a href="index.html">
+          <button class="mess-exit-btn">Exit</button>
+        </a>
+      
+    </div> 
+
+
+    
+<script>
+  document.getElementById('submitAnotherBtn').addEventListener('click', function() {
+    window.location.href = '2-Survey.html';  // ← change this if your survey file name is different
+  });
+</script>
+
+    <script>
+    // For Survey Form
+if (document.getElementById('surveyForm')) {
+  const form = document.getElementById('surveyForm');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    const entry = {
+      address: data.get('address'),
+      family_members: data.get('family_members'),
+      kit: data.get('kit'),
+      evac: data.getAll('evac[]'),
+      experience: data.get('experience')
+    };
+
+    localStorage.setItem('surveyData', JSON.stringify(entry));
+    window.location.href = '3.2-Message-Directory.html';
+  });
+}
+
+</script>
+
+</body>
+
+</html>
