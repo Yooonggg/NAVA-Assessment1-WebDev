@@ -308,3 +308,48 @@ button:hover{
   }
   
 
+  @media (max-width: 768px) {
+    .container,
+    #survey-container {
+      margin: 5%;
+      width: 90%;
+    }
+  
+    .radio-group,
+    .checkbox-group {
+      flex-direction: column;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  
+    label.yes-label,
+    label.no-label {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .nav-btns {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+      padding-inline-end: 0;
+    }
+  
+    #print-btn, #clearBtn, #exit-btn {
+      width: 80%;
+      margin-bottom: 10px;
+    }
+  
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+    }
+  
+    #textarea, .address, .number, #username, #password {
+      max-width: 100%;
+    }
+  
+    table {
+      font-size: 14px;
+    }
+  }
