@@ -44,6 +44,22 @@ button {
   outline: none; /* Center horizontally */
 }
 
+button a {
+  text-decoration: none;  /* In case it's wrapped in an <a> tag */
+}
+
+a {
+  text-decoration: none; /* Ensure no underline for <a> tags */
+}
+
+button:focus {
+  outline: none;  /* Ensure no outline on focus */
+}
+
+button:active, button:focus {
+  text-decoration: none !important;  /* Ensure no underline on active/focused state */
+}
+
 button:hover {
   background-color: #163832;
 }
