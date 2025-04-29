@@ -146,9 +146,12 @@ label {
 
 /* Container Groups */
 .checkbox-group {
-  margin: 2%;
-  padding: 2%;
-  gap: 1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem; /* space between radio options */
+  gap: 0.5rem;   
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .radio-group{
