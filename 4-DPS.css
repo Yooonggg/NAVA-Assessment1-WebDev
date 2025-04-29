@@ -78,6 +78,18 @@ button:hover {
   
 }
 
+#survey-container{
+  margin-top: 2%;
+  margin-bottom: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 2%;
+}
+
 /* Survey Page */
 #survey-heading {
   font-family: Helvetica;
@@ -132,7 +144,7 @@ label {
 /* Radio & Checkbox Groups */
 .radio-group, .checkbox-group {
   margin: 0.3%;
-  padding: 0.09%;
+  padding: 0.09%; 
 }
 
 .radio-group {
@@ -143,10 +155,12 @@ label {
 }
 
 .checkbox-group {
-  display: flex;
+
   gap: 0.2rem;
   align-items: center;
   flex-wrap: wrap;
+  padding: 1rem;
+  padding-bottom: 2rem;
 }
 
 label.yes-label, label.no-label, label.Ass-label, label.fam-label {
