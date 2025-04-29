@@ -144,30 +144,49 @@ label {
 
 /* Radio & Checkbox Groups */
 
-.radio-group, .checkbox-group{
+/* Container Groups */
+.checkbox-group {
   margin: 2%;
-  display: flex;
+  padding: 2%;
   gap: 1rem;
 }
 
-label.yes-label, label.no-label, label.Ass-label, label.fam-label {
-  padding: 0.5rem 0.5rem;
-  border:  solid #ccc;
+.radio-group{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem; /* space between radio options */
+  gap: 0.5rem;   
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* === Base Label Styles === */
+label.yes-label,
+label.no-label,
+label.Ass-label,
+label.fam-label {
+  width: 50%;
+  margin-bottom: 10px;
+  padding: 0.5rem;
+  border: solid #ccc;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.2s ease;
   user-select: none;
-  width: 50%;
 }
 
-label.yes-label:hover, label.no-label:hover, label.Ass-label:hover, label.fam-label:hover {
+/* === Hover Effects === */
+label.yes-label:hover,
+label.no-label:hover,
+label.Ass-label:hover,
+label.fam-label:hover {
   background-color: #DAF1DE;
   border-color: #163832;
   color: #163832;
-  padding:2%;
+  padding: 2%;
 }
 
-/* Checked States */
+/* === Checked Radio Buttons === */
 input[type="radio"]:checked + label.yes-label {
   background-color: green;
   color: white;
@@ -180,11 +199,14 @@ input[type="radio"]:checked + label.no-label {
   border-color: red;
 }
 
-input[type="checkbox"]:checked + label.fam-label, input[type="checkbox"]:checked + label.Ass-label {
+/* === Checked Checkboxes === */
+input[type="checkbox"]:checked + label.fam-label,
+input[type="checkbox"]:checked + label.Ass-label {
   background-color: #0b2b26;
   color: white;
   border-color: #0b2b26;
 }
+
 
 /* Printable Data */
 table {
@@ -238,7 +260,7 @@ td {
 }
 
 /* Media query for smaller screen sizes */
-@media (max-width: 100%) {
+@media (max-width: 90%) {
   #exit-btn, #print-btn, #clearBtn {
     width: 100%;  /* Button width becomes larger on smaller screens */
     font-size: 0.9rem;  /* Slightly smaller font size */
@@ -255,6 +277,9 @@ td {
     margin-left: 1;  /* Remove margin */
     margin-right: 1;
     text-align: center;
+  }
+  h1{
+    font-size: 10rem;
   }
 
 
