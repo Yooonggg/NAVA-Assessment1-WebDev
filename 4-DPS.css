@@ -240,13 +240,24 @@ td {
 /* Media query for smaller screen sizes */
 @media (max-width: 100%) {
   #exit-btn, #print-btn, #clearBtn {
-    width: 70%;  /* Button width becomes larger on smaller screens */
+    width: 100%;  /* Button width becomes larger on smaller screens */
     font-size: 0.9rem;  /* Slightly smaller font size */
     padding: 0.2em 0.9em;  /* Even thinner padding for smaller screens */
     margin-left: 0;  /* Remove margin */
     margin-right: 0;
     text-align: center;
   }
+
+  .radio-group, .checkbox-group{
+    width:100%;
+    font-size: 0.9rem;  /* Slightly smaller font size */
+    padding: 0.2em 0.9em;  /* Even thinner padding for smaller screens */
+    margin-left: 1;  /* Remove margin */
+    margin-right: 1;
+    text-align: center;
+  }
+
+
 }
 
 @media (max-width: 48%) {
