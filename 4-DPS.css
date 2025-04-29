@@ -145,19 +145,19 @@ label {
 /* Radio & Checkbox Groups */
 
 .radio-group, .checkbox-group{
-  margin: 5%;
+  margin: 2%;
   display: flex;
   gap: 1rem;
 }
 
 label.yes-label, label.no-label, label.Ass-label, label.fam-label {
   padding: 0.5rem 0.5rem;
-  border: 2px solid #ccc;
+  border:  solid #ccc;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.2s ease;
   user-select: none;
-  width: 100%;
+  width: 50%;
 }
 
 label.yes-label:hover, label.no-label:hover, label.Ass-label:hover, label.fam-label:hover {
@@ -238,9 +238,9 @@ td {
 }
 
 /* Media query for smaller screen sizes */
-@media (max-width: 768px) {
+@media (max-width: 100%) {
   #exit-btn, #print-btn, #clearBtn {
-    width: 80%;  /* Button width becomes larger on smaller screens */
+    width: 70%;  /* Button width becomes larger on smaller screens */
     font-size: 0.9rem;  /* Slightly smaller font size */
     padding: 0.2em 0.9em;  /* Even thinner padding for smaller screens */
     margin-left: 0;  /* Remove margin */
@@ -249,7 +249,7 @@ td {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 48%) {
   #exit-btn, #print-btn, #clearBtn {
     width: 90%;  /* Further increase width on extra small screens */
     padding: 0.2em 0.7em;  /* Thinner padding for very small screens */
