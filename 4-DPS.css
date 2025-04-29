@@ -90,9 +90,7 @@ button:hover {
   padding: 2%;
 }
 
-.hr{
-  display: flex;
-}
+
 /* Survey Page */
 #survey-heading {
   font-family: Helvetica;
@@ -152,18 +150,15 @@ label {
 
 .radio-group {
   display: flex;
-  gap: 0.1rem;
+  gap: 1rem;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .checkbox-group {
 
-  gap: 0.2rem;
+  display: flex;
+  gap: 1rem;
   align-items: center;
-  flex-wrap: wrap;
-  padding: 1rem;
-  padding-bottom: 2rem;
 }
 
 label.yes-label, label.no-label, label.Ass-label, label.fam-label {
