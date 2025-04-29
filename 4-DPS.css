@@ -143,21 +143,12 @@ label {
 }
 
 /* Radio & Checkbox Groups */
-.radio-group, .checkbox-group {
-  width: 100%;
-  height: 3rem;
-  padding: 3rem;
-  font-size: 1rem;
-  font-family: Arial, sans-serif;
-  box-sizing: border-box;
-  border-radius: 5px;
-  margin-top: 2%;
-  margin-bottom: 2%;
+
+.radio-group, .checkbox-group{
+  margin: 5%;
   display: flex;
   gap: 1rem;
-  align-items: center;
 }
-
 
 label.yes-label, label.no-label, label.Ass-label, label.fam-label {
   padding: 0.5rem 0.5rem;
@@ -173,6 +164,7 @@ label.yes-label:hover, label.no-label:hover, label.Ass-label:hover, label.fam-la
   background-color: #DAF1DE;
   border-color: #163832;
   color: #163832;
+  padding:2%;
 }
 
 /* Checked States */
