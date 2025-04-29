@@ -33,9 +33,8 @@
 <div class="nav-btns" align="right">
   <button onclick="window.print()" id="print-btn">Print Report</button>
   <button id="clearBtn">Clear Survey Data</button>
-  <a href= "index.html" >
   <button id="exit-btn">Exit</button>
-  </a>
+  
 </div>
   <script>
     const table = document.querySelector('#resultsTable tbody');
@@ -66,6 +65,10 @@ document.getElementById('clearBtn').addEventListener('click', function() {
       localStorage.removeItem('surveyList');
       location.reload(); // Reload to update the displayed data
     }
+  });
+
+  document.getElementById('exit-btn').addEventListener('click', function () {
+    window.location.href = 'index.html';
   });
 
   </script>
