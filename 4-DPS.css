@@ -227,14 +227,28 @@ table {
 th {
   padding: 1rem;
   background-color: #163832;
-  text-align: center;
   color: white;
 }
+#resultsTable thead th:nth-child(1) {
+  width:30%;
+  
+}
+
+#resultsTable thead th:nth-child(2), #resultsTable thead th:nth-child(3) {
+  width:10%;
+  text-align: left;
+}
+
+#resultsTable thead th:nth-child(4) {
+  width:15%;
+}
+
+
 
 td {
-  padding: 1rem;
+  padding: 2rem;
   border-bottom: 1px solid #ddd;
-  text-align: center;
+  text-align: justify;
 }
 
 .nav-btns {
@@ -258,6 +272,7 @@ td {
   width: 20%;  /* Same width for all buttons */
   padding: 1rem;
 }
+
 
 #exit-btn:hover, #print-btn:hover, #clearBtn:hover {
   background-color: #163832;
@@ -372,5 +387,56 @@ td {
 @media print{
   .nav-btns {
     display: none !important;
+  }
+  
+  h2{
+    font-size: 30px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    font-family: Arial;
+    color:#9dd5cd
+    margin-bottom: 5%;
+    font-size: 15px;
+  }
+  
+  th {
+    padding: 1rem;
+    background-color: #163832;
+    color: rgb(103, 82, 82);
+    text-align: left;
+
+    
+  }
+  #resultsTable thead th:nth-child(1) {
+    width:30%;
+    color:#0b2b26
+    
+  }
+  
+  #resultsTable thead th:nth-child(2), #resultsTable thead th:nth-child(3) {
+    width:10%;
+    color:#0b2b26
+  }
+  
+  #resultsTable thead th:nth-child(4) {
+    width:20%;
+    color:#0b2b26
+  }
+  #resultsTable thead th:nth-child(5) {
+    width:auto;
+    color:#0b2b26
+  }
+  
+  
+  td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    font-size: 12px;
   }
 }
