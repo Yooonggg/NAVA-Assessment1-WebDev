@@ -152,6 +152,7 @@ label {
   display: flex;
   gap: 1rem;
   align-items: center;
+  max-width: 50%;
 }
 
 .checkbox-group {
