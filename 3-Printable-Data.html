@@ -63,7 +63,7 @@ surveyList.forEach(entry => {
 document.getElementById('clearBtn').addEventListener('click', function() {
     if (confirm('Are you sure you want to clear all survey data?')) {
       localStorage.removeItem('surveyList');
-      location.reload(); // Reload to update the displayed data
+      location.reload(); 
     }
   });
 

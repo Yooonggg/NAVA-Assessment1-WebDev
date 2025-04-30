@@ -81,16 +81,12 @@ form.addEventListener('submit', function (e) {
     experience: data.get('experience')
   };
 
-  // Get the existing list, or create a new one
   const surveyList = JSON.parse(localStorage.getItem('surveyList')) || [];
 
-  // Add the new entry
   surveyList.push(entry);
 
-  // Save it back
   localStorage.setItem('surveyList', JSON.stringify(surveyList));
 
-  // Now redirect to the message page
   window.location.href = '3.2-Message-Directiory.html'; 
 });
 
